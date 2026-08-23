@@ -2,34 +2,34 @@
   <main class="about-container">
     <section class="about-banner">
       <div class="about-content">
-        <h1 class="about-title">About Us</h1>
+        <h1 class="about-title">Learning</h1>
       </div>
     </section>
 
     <!-- Main Content Section -->
     <section class="about-details">
       <div class="details-card">
-        <h2 class="section-title">Our Mission</h2>
+        <h2 class="section-title">How We Teach</h2>
         <p class="section-text">
-          At Evermont Kids we believe that children are naturally eager to learn and that through play, exploration and positive introductions, a love of learning can be nurtured at an early age.  
-
-          Our beautiful, child-centered environment encourages curiosity, play, creativity and expression to inspire life-long learning. 
-          We’ve designed a comfortable learning space that is both natural and stimulating, allowing children to feel
-          at ease and excited to learn. 
+          Evermont Kids uses the EYFS framework for learning, development and care of children aged 18 months to 5 years.
+          We apply theme-based, active learning to achieve set goals for each age level. Math is taught with hands-on activities where children can touch, move and make values, sums and patterns. This leads them to master mathematical concepts at their roots. Science is taught through exploration and experimentation. Literacy is introduced and practiced through themes, games, songs and stories. An array of extracurricular activities are offered to expose children to various strengths, skills, and potential passions. Extracurriculars include visual arts, music, swimming, physical education, cooking and gardening. 
         </p>
       </div>
 
       <div class="details-card">
-        <h2 class="section-title">Our Commitment</h2>
+        <h2 class="section-title">Our Curriculum</h2>
         <p class="section-text">
           We are committed to instilling confidence, creativity and a love of learning in each child while providing excellent primary school preparation.
         </p>
       </div>
 
+
       <div class="details-card">
-        <h2 class="section-title">What Sets Us Apart:</h2>
+        <h2 class="section-title">Primary School Preparation </h2>
         <p class="section-text">
-          We are a small school by design working only with small groups to provide the close attention and personalized nurturing that is needed during the early years of learning. With the small group design children feel encouraged to ask questions and express their thoughts. It also allows teachers to observe each child’s unique abilities and level of understanding instantly so that we can further challenge strengths and give extra support for weak areas promptly. 
+          Evermont kids is a comfortable transition from home to school, where children feel connected to their teachers and know that they will be heard, guided and encouraged. 
+          As preschool is often the first step of independence into the world, we’ve created a secure, calm, playful and structured environment to develop social skills, academic skills and self esteem. 
+          Our teachers work with age appropriate goals for academic, physical and emotional development to ensure a smooth and successful transition into primary school. 
         </p>
       </div>
     </section>
@@ -57,7 +57,7 @@
   width: 100%;
   height: 110px;             /* Exact Mobile Height */
   margin: 0 auto;
-  background-color: #40E0D0; /* Turquoise background */
+  background-color: #f8f40b; /* Turquoise background */
   border-radius: 16px;       /* Rounded corners */
   overflow: hidden;          /* Keeps inner content within rounded edges */
   padding: 0 1.5rem;         /* Removed vertical padding so height stays exact */

@@ -49,8 +49,8 @@ onUnmounted(() => {
       <!-- Navigation Links -->
       <div class="nav-links" :class="{ 'is-open': isMenuOpen }">
         <RouterLink to="/" @click="closeMenu">Home</RouterLink>
-        <RouterLink to="/about" @click="closeMenu">About</RouterLink>
         <RouterLink to="/learning" @click="closeMenu">Learning</RouterLink>
+        <RouterLink to="/our-days" @click="closeMenu">Our Days</RouterLink>
         <RouterLink to="/contact" @click="closeMenu">Contact</RouterLink>
       </div>
     </nav>
