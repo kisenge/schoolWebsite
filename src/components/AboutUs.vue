@@ -11,12 +11,44 @@
       <div class="details-card">
         <h2 class="section-title">Our Mission</h2>
         <p class="section-text">
-          At Evermont Kids we believe that children are naturally eager to learn and that through play, exploration and positive introductions, a love of learning can be nurtured at an early age.  
-
-          Our beautiful, child-centered environment encourages curiosity, play, creativity and expression to inspire life-long learning. 
-          We’ve designed a comfortable learning space that is both natural and stimulating, allowing children to feel
-          at ease and excited to learn. 
+          At Evermont Kids we believe that children are naturally eager to learn and that through play, exploration and positive introductions, a love of learning can be nurtured at an early age.
+          Our beautiful, child-centered environment encourages curiosity, play, creativity and expression to inspire life-long learning.
+          We've designed a comfortable learning space that is both natural and stimulating, allowing children to feel at ease and excited to learn.
         </p>
+      </div>
+
+      <!-- Photo Gallery: 4 vertical images, first with text overlay -->
+      <div class="gallery-grid">
+        
+        <div class="gallery-item">
+          <img
+            src="/ek7.jpg"
+            alt="Evermont Kids classroom"
+            class="gallery-image"
+          />
+        </div>
+        <div class="gallery-item">
+          <img
+            src="/ek8.jpg"
+            alt="Evermont Kids outdoor play"
+            class="gallery-image"
+          />
+        </div>
+        <div class="gallery-item">
+          <img
+            src="/ek9.jpg"
+            alt="Evermont Kids activities"
+            class="gallery-image"
+          />
+        </div>
+        <div class="gallery-item">
+          <img
+            src="/ek10.jpg"
+            alt="Evermont Kids classroom"
+            class="gallery-image"
+          />
+        </div>
+        
       </div>
 
       <div class="details-card">
@@ -26,10 +58,21 @@
         </p>
       </div>
 
+      <div class="gallery-item gallery-feature">
+          <img
+            src="/ek6.jpg"
+            alt="Children learning at Evermont Kids"
+            class="gallery-image"
+          />
+          <div class="gallery-overlay">
+            <span class="gallery-overlay-text">Curiosity. Creativity. Confidence.</span>
+          </div>
+        </div>
+
       <div class="details-card">
-        <h2 class="section-title">What Sets Us Apart:</h2>
+        <h2 class="section-title">What Sets Us Apart</h2>
         <p class="section-text">
-          We are a small school by design working only with small groups to provide the close attention and personalized nurturing that is needed during the early years of learning. With the small group design children feel encouraged to ask questions and express their thoughts. It also allows teachers to observe each child’s unique abilities and level of understanding instantly so that we can further challenge strengths and give extra support for weak areas promptly. 
+          We are a small school by design, working only with small groups to provide the close attention and personalized nurturing that is needed during the early years of learning. With the small group design, children feel encouraged to ask questions and express their thoughts. It also allows teachers to observe each child's unique abilities and level of understanding instantly, so that we can further challenge strengths and give extra support for weak areas promptly.
         </p>
       </div>
     </section>
@@ -55,17 +98,18 @@
 ============================================================ */
 .about-banner {
   width: 100%;
-  height: 110px;             /* Exact Mobile Height */
+  height: 110px;
   margin: 0 auto;
-  background-color: #40E0D0; /* Turquoise background */
-  border-radius: 16px;       /* Rounded corners */
-  overflow: hidden;          /* Keeps inner content within rounded edges */
-  padding: 0 1.5rem;         /* Removed vertical padding so height stays exact */
+  background-color: #40E0D0;
+  border-radius: 16px;
+  overflow: hidden;
+  padding: 0 1.5rem;
   box-sizing: border-box;
   display: flex;
   justify-content: center;
   align-items: center;
-  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.15);
+ 
+  animation: fadeInUp 0.6s ease both;
 }
 
 .about-content {
@@ -80,20 +124,13 @@
 }
 
 .about-title {
-  font-size: 3rem;
-  font-weight: 800;
+  font-size: 1.85rem;
+  font-weight: 700;
+  letter-spacing: -0.01em;
   color: #000000;
   margin: 0;
-  line-height: 1.1;
+  line-height: 1.15;
   word-break: break-word;
-}
-
-.about-description {
-  font-size: 1.15rem;
-  color: #000000;
-  margin: 0;
-  line-height: 1.5;
-  max-width: 650px;
 }
 
 /* ============================================================
@@ -103,12 +140,12 @@
   width: 100%;
   max-width: 900px;
   margin: 0 auto;
-  padding: 3rem 1.5rem;
+  padding: 2.25rem 1.5rem;
   box-sizing: border-box;
   display: flex;
   flex-direction: column;
   align-items: center;
-  gap: 2.5rem;
+  gap: 2rem;
 }
 
 .details-card {
@@ -117,22 +154,78 @@
   flex-direction: column;
   align-items: center;
   text-align: center;
-  gap: 0.75rem;
+  gap: 0.6rem;
+  animation: fadeInUp 0.6s ease both;
 }
 
 .section-title {
-  font-size: 2rem;
+  font-size: 1.3rem;
   font-weight: 700;
-  color: #bb55ef; /* Brand purple */
+  color: #bb55ef;
   margin: 0;
 }
 
 .section-text {
-  font-size: 1.1rem;
+  font-size: 0.95rem;
   color: #333333;
   line-height: 1.6;
   margin: 0;
-  max-width: 750px;
+  max-width: 700px;
+}
+
+/* ============================================================
+   3b. PHOTO GALLERY
+============================================================ */
+.gallery-grid {
+  width: 100%;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 0.75rem;
+  animation: fadeInUp 0.7s ease both;
+}
+
+.gallery-item {
+  position: relative;
+  width: 100%;
+  aspect-ratio: 3 / 4;
+  border-radius: 14px;
+  overflow: hidden;
+ 
+  
+}
+
+.gallery-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  transition: transform 0.4s ease;
+}
+
+.gallery-item:hover .gallery-image {
+  transform: scale(1.05);
+}
+
+.gallery-feature {
+  grid-column: span 2;
+  aspect-ratio: 16 / 9;
+}
+
+.gallery-overlay {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  align-items: flex-end;
+  padding: 1rem;
+  box-sizing: border-box;
+}
+
+.gallery-overlay-text {
+  color: #ffffff;
+  font-weight: 700;
+  font-size: 1rem;
+  line-height: 1.3;
+  text-align: left;
 }
 
 /* ============================================================
@@ -140,21 +233,25 @@
 ============================================================ */
 @media (min-width: 571px) {
   .about-banner {
-    height: 120px;           /* Exact Tablet Height */
+    height: 120px;
     border-radius: 20px;
     padding: 0 2rem;
   }
 
   .about-title {
-    font-size: 3.5rem;
-  }
-
-  .about-description {
-    font-size: 1.25rem;
+    font-size: 2.1rem;
   }
 
   .section-title {
-    font-size: 2.25rem;
+    font-size: 1.45rem;
+  }
+
+  .section-text {
+    font-size: 1rem;
+  }
+
+  .gallery-overlay-text {
+    font-size: 1.1rem;
   }
 }
 
@@ -163,30 +260,36 @@
 ============================================================ */
 @media (min-width: 821px) {
   .about-banner {
-    height: 120px;           /* Exact Desktop Height */
+    height: 120px;
     border-radius: 24px;
     padding: 0 2rem;
   }
 
   .about-title {
-    font-size: 3.5rem;
-  }
-
-  .about-description {
-    font-size: 1.35rem;
+    font-size: 2.25rem;
   }
 
   .about-details {
-    padding: 4rem 2rem;
-    gap: 3.5rem;
+    padding: 3rem 2rem;
+    gap: 2.5rem;
   }
 
   .section-title {
-    font-size: 2.5rem;
+    font-size: 1.6rem;
   }
 
   .section-text {
-    font-size: 1.2rem;
+    font-size: 1.02rem;
+  }
+
+  .gallery-grid {
+    grid-template-columns: repeat(4, 1fr);
+    gap: 1rem;
+  }
+
+  .gallery-feature {
+    grid-column: span 2;
+    aspect-ratio: 4 / 3;
   }
 }
 
@@ -195,7 +298,7 @@
 ============================================================ */
 @media (min-width: 1101px) {
   .about-banner {
-    height: 120px;           /* Exact Large Desktop Height */
+    height: 120px;
     border-radius: 28px;
     padding: 0 3rem;
   }
@@ -205,26 +308,25 @@
   }
 
   .about-title {
-    font-size: 3.5rem;
-  }
-
-  .about-description {
-    font-size: 1.4rem;
-    max-width: 750px;
+    font-size: 2.4rem;
   }
 
   .about-details {
     max-width: 1050px;
-    padding: 5rem 2rem;
+    padding: 3.5rem 2rem;
   }
 
   .section-title {
-    font-size: 2.75rem;
+    font-size: 1.75rem;
   }
 
   .section-text {
-    font-size: 1.25rem;
-    max-width: 850px;
+    font-size: 1.05rem;
+    max-width: 800px;
+  }
+
+  .gallery-grid {
+    gap: 1.25rem;
   }
 }
 
@@ -233,7 +335,7 @@
 ============================================================ */
 @media (min-width: 1440px) {
   .about-banner {
-    height: 120px;           /* Exact Ultra-Wide Desktop Height */
+    height: 120px;
     padding: 0 4rem;
     border-radius: 32px;
   }
@@ -243,27 +345,47 @@
   }
 
   .about-title {
-    font-size: 3.5rem;
-  }
-
-  .about-description {
-    font-size: 1.5rem;
-    max-width: 850px;
+    font-size: 2.5rem;
   }
 
   .about-details {
     max-width: 1200px;
-    padding: 6rem 2rem;
-    gap: 4.5rem;
+    padding: 4rem 2rem;
+    gap: 3rem;
   }
 
   .section-title {
-    font-size: 2.5rem;
+    font-size: 1.8rem;
   }
 
   .section-text {
-    font-size: 1.3rem;
-    max-width: 950px;
+    font-size: 1.08rem;
+    max-width: 900px;
+  }
+}
+
+/* ============================================================
+   8. ANIMATIONS
+============================================================ */
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(14px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .about-banner,
+  .details-card,
+  .gallery-grid {
+    animation: none;
+  }
+  .gallery-image {
+    transition: none;
   }
 }
 </style>

@@ -51,7 +51,7 @@ onUnmounted(() => {
         <RouterLink to="/" @click="closeMenu">Home</RouterLink>
         <RouterLink to="/learning" @click="closeMenu">Learning</RouterLink>
         <RouterLink to="/our-days" @click="closeMenu">Our Days</RouterLink>
-        <RouterLink to="/contact" @click="closeMenu">Contact</RouterLink>
+        <RouterLink to="/contact-us" @click="closeMenu">Contact</RouterLink>
       </div>
     </nav>
   </header>
@@ -59,7 +59,7 @@ onUnmounted(() => {
 
 <style scoped>
 /* ============================================================
-   1. STICKY WRAPPER (Locks flush to top of screen on scroll)
+   1. STICKY WRAPPER
 ============================================================ */
 .navbar-sticky-wrapper {
   position: sticky;
@@ -68,59 +68,65 @@ onUnmounted(() => {
   right: 0;
   z-index: 9999;
   width: 100%;
-  margin: 0; /* Ensures no gap above the sticky wrapper */
+  max-width: 100%; /* REPLACED 100vw with 100% */
+  margin: 0;
   background-color: transparent;
+  overflow-x: hidden;
 }
 
 /* ============================================================
-   2. MOBILE BASE STYLES
+   2. MOBILE BASE STYLES (Up to 570px)
 ============================================================ */
 .navbar {
   width: 100%;
-  margin: 0 auto; /* Removed the top 0.5rem margin */
+  max-width: 100%;
+  margin: 0 auto;
   background-color: #bb55ef;
-  padding: 0.75rem 1.25rem;
+  padding: 0.75rem 1rem;
   display: flex;
   flex-direction: column;
   box-sizing: border-box;
-  border-radius: 0 0 12px 12px; /* Keeps rounded bottom corners on mobile */
+  border-radius: 0 0 12px 12px;
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
   transition: all 0.3s ease;
 }
 
-/* Row setup: Keeps logo LEFT and hamburger RIGHT on mobile */
 .nav-header {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
   align-items: center;
   width: 100%;
+  box-sizing: border-box;
 }
 
 .nav-brand {
   display: flex;
   align-items: center;
   text-decoration: none;
+  flex-shrink: 0;
 }
 
 .brand-logo {
-  width: 50px;
-  height: 50px;
+  width: 48px;
+  height: 48px;
   border-radius: 50%;
   object-fit: cover;
   border: 2px solid #42b883;
+  flex-shrink: 0;
 }
 
 .hamburger {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  width: 30px;
+  width: 28px;
   height: 20px;
   background: transparent;
   border: none;
   cursor: pointer;
   padding: 0;
+  flex-shrink: 0;
 }
 
 .hamburger .bar {
@@ -147,16 +153,17 @@ onUnmounted(() => {
   display: flex;
   flex-direction: column;
   align-items: center;
-  gap: 1rem;
+  gap: 0.85rem;
   width: 100%;
   max-height: 0;
   overflow: hidden;
   transition: max-height 0.35s ease-in-out, padding 0.35s ease;
+  box-sizing: border-box;
 }
 
 .nav-links.is-open {
   max-height: 250px;
-  padding-top: 1rem;
+  padding-top: 0.85rem;
   padding-bottom: 0.5rem;
 }
 
@@ -164,6 +171,7 @@ onUnmounted(() => {
   color: #ffffff;
   text-decoration: none;
   font-weight: 500;
+  font-size: 0.95rem;
   transition: color 0.2s ease;
 }
 
@@ -180,8 +188,9 @@ onUnmounted(() => {
     flex-direction: row;
     justify-content: space-between;
     align-items: center;
-    padding: 0.75rem 2rem;
-    height: 80px;
+    padding: 0.75rem 1.5rem;
+    min-height: 60px;
+    height: auto; /* Replaced rigid height with flexible min-height */
   }
 
   .nav-header {
@@ -199,7 +208,35 @@ onUnmounted(() => {
     max-height: none;
     overflow: visible;
     padding: 0;
+    gap: 1.5rem;
+  }
+
+  .nav-links a {
+    font-size: 0.95rem;
+  }
+
+  .brand-logo {
+    width: 54px;
+    height: 54px;
+  }
+}
+
+/* ============================================================
+   4. DESKTOP (821px to 1100px)
+============================================================ */
+@media (min-width: 821px) {
+  .navbar {
+    min-height: 60px;
+    padding: 0rem 2rem;
+    border-radius: 0;
+  }
+
+  .nav-links {
     gap: 2rem;
+  }
+
+  .nav-links a {
+    font-size: 1rem;
   }
 
   .brand-logo {
@@ -209,46 +246,24 @@ onUnmounted(() => {
 }
 
 /* ============================================================
-   4. DESKTOP (821px and up)
-   Prevents logo/links from shifting into the center
-============================================================ */
-@media (min-width: 821px) {
-  .navbar {
-    height: 90px;
-    padding: 1rem 3rem;
-    width: 100%;
-    max-width: 100%;
-    border-radius: 0;
-    margin: 0;
-    box-sizing: border-box;
-    justify-content: space-between; /* Keeps logo far left and menu far right */
-  }
-
-  .nav-links {
-    gap: 3rem;
-  }
-
-  .brand-logo {
-    width: 70px;
-    height: 70px;
-  }
-}
-
-/* ============================================================
    5. XLARGE & ULTRA WIDE SCREENS (1101px and up)
 ============================================================ */
 @media (min-width: 1101px) {
   .navbar {
-    padding: 1rem 4rem;
+    padding: 0 3rem;
+  }
+
+  .nav-links {
+    gap: 2.5rem;
   }
 
   .nav-links a {
-    font-size: 1.15rem;
+    font-size: 1.05rem;
   }
 
   .brand-logo {
-    width: 75px;
-    height: 75px;
+    width: 65px;
+    height: 65px;
   }
 }
 </style>

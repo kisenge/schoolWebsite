@@ -1,5 +1,7 @@
 <script setup>
+import ClassesSection from '@/components/ClassesSection.vue';
 import PrimarySchool from '../components/PrimarySchool.vue'
+
 </script>
 
 
@@ -7,6 +9,7 @@ import PrimarySchool from '../components/PrimarySchool.vue'
   <main>
     <br />
     <PrimarySchool />
+    <ClassesSection />
    
   </main>
 </template>

@@ -51,7 +51,6 @@
   /*background-color: #40E0D0; /* Turquoise background */
   border-radius: 16px;
   overflow: hidden;
-  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.25);
   transition: all 0.3s ease;
   position: relative;
 }

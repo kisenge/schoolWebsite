@@ -12,8 +12,17 @@
         <h2 class="section-title">How We Teach</h2>
         <p class="section-text">
           Evermont Kids uses the EYFS framework for learning, development and care of children aged 18 months to 5 years.
-          We apply theme-based, active learning to achieve set goals for each age level. Math is taught with hands-on activities where children can touch, move and make values, sums and patterns. This leads them to master mathematical concepts at their roots. Science is taught through exploration and experimentation. Literacy is introduced and practiced through themes, games, songs and stories. An array of extracurricular activities are offered to expose children to various strengths, skills, and potential passions. Extracurriculars include visual arts, music, swimming, physical education, cooking and gardening. 
+          We apply theme-based, active learning to achieve set goals for each age level. Math is taught with hands-on activities where children can touch, move and make values, sums and patterns, leading them to master mathematical concepts at their roots. Science is taught through exploration and experimentation. Literacy is introduced and practiced through themes, games, songs and stories. An array of extracurricular activities are offered to expose children to various strengths, skills and potential passions, including visual arts, music, swimming, physical education, cooking and gardening.
         </p>
+      </div>
+
+      <!-- Horizontal feature photo -->
+      <div class="feature-photo">
+        <img
+          src="/ek3.jpg"
+          alt="Hands-on learning at Evermont Kids"
+          class="feature-photo-image"
+        />
       </div>
 
       <div class="details-card">
@@ -23,13 +32,32 @@
         </p>
       </div>
 
+      <div class="details-card">
+        <h2 class="section-title">Primary School Preparation</h2>
+        <p class="section-text">
+          Evermont Kids is a comfortable transition from home to school, where children feel connected to their teachers and know that they will be heard, guided and encouraged.
+          As preschool is often the first step of independence into the world, we've created a secure, calm, playful and structured environment to develop social skills, academic skills and self-esteem.
+          Our teachers work with age-appropriate goals for academic, physical and emotional development to ensure a smooth and successful transition into primary school.
+        </p>
+      </div>
+
+      <!-- Vertical photo triptych -->
+      <div class="triptych-grid">
+        <div class="triptych-item">
+          <img src="/ek14.jpg" alt="Evermont Kids learning moment" class="triptych-image" />
+        </div>
+        <div class="triptych-item">
+          <img src="/ek-w2.jpg" alt="Evermont Kids classroom activity" class="triptych-image" />
+        </div>
+        <div class="triptych-item">
+          <img src="/ek15.jpg" alt="Evermont Kids creative play" class="triptych-image" />
+        </div>
+      </div>
 
       <div class="details-card">
-        <h2 class="section-title">Primary School Preparation </h2>
+        <h2 class="section-title">Nurturing The Whole Child</h2>
         <p class="section-text">
-          Evermont kids is a comfortable transition from home to school, where children feel connected to their teachers and know that they will be heard, guided and encouraged. 
-          As preschool is often the first step of independence into the world, we’ve created a secure, calm, playful and structured environment to develop social skills, academic skills and self esteem. 
-          Our teachers work with age appropriate goals for academic, physical and emotional development to ensure a smooth and successful transition into primary school. 
+          At Evermont Kids we work towards developing confident, well-balanced, life-long learners by incorporating healthy habits and practices in everything we do. We prioritize nutritional meals, a growth mindset, confidence building and positive play.
         </p>
       </div>
     </section>
@@ -42,12 +70,14 @@
 ============================================================ */
 .about-container {
   width: 100%;
+  max-width: 100%;
   margin: 0 auto;
   padding: 0;
   display: flex;
   flex-direction: column;
   align-items: center;
   box-sizing: border-box;
+  overflow-x: hidden;
 }
 
 /* ============================================================
@@ -55,45 +85,46 @@
 ============================================================ */
 .about-banner {
   width: 100%;
-  height: 110px;             /* Exact Mobile Height */
+  max-width: 100%;
+  height: 110px;
   margin: 0 auto;
-  background-color: #f8f40b; /* Turquoise background */
-  border-radius: 16px;       /* Rounded corners */
-  overflow: hidden;          /* Keeps inner content within rounded edges */
-  padding: 0 1.5rem;         /* Removed vertical padding so height stays exact */
+  background-color: #f8f40b;
+  border-radius: 16px;
+  overflow: hidden;
+  padding: 0 1rem;
   box-sizing: border-box;
   display: flex;
   justify-content: center;
   align-items: center;
+  text-align: center;
   box-shadow: 0 8px 24px rgba(0, 0, 0, 0.15);
+  animation: fadeInUp 0.6s ease both;
 }
 
 .about-content {
   width: 100%;
-  max-width: 800px;
+  max-width: 100%;
   margin: 0 auto;
   display: flex;
   flex-direction: column;
   align-items: center;
+  justify-content: center;
   text-align: center;
-  gap: 1.25rem;
+  gap: 0.5rem;
+  box-sizing: border-box;
 }
 
 .about-title {
-  font-size: 3rem;
-  font-weight: 800;
+  font-size: 1.6rem;
+  font-weight: 700;
+  letter-spacing: -0.01em;
   color: #000000;
-  margin: 0;
-  line-height: 1.1;
-  word-break: break-word;
-}
-
-.about-description {
-  font-size: 1.15rem;
-  color: #000000;
-  margin: 0;
-  line-height: 1.5;
-  max-width: 650px;
+  margin: 0 auto;
+  line-height: 1.15;
+  text-align: center;
+  width: 100%;
+  word-wrap: break-word;
+  overflow-wrap: break-word;
 }
 
 /* ============================================================
@@ -101,14 +132,14 @@
 ============================================================ */
 .about-details {
   width: 100%;
-  max-width: 900px;
+  max-width: 800px;
   margin: 0 auto;
-  padding: 3rem 1.5rem;
+  padding: 1.75rem 1rem;
   box-sizing: border-box;
   display: flex;
   flex-direction: column;
   align-items: center;
-  gap: 2.5rem;
+  gap: 1.5rem;
 }
 
 .details-card {
@@ -117,22 +148,80 @@
   flex-direction: column;
   align-items: center;
   text-align: center;
-  gap: 0.75rem;
+  gap: 0.5rem;
+  box-sizing: border-box;
+  animation: fadeInUp 0.6s ease both;
 }
 
 .section-title {
-  font-size: 2rem;
+  font-size: 1.2rem;
   font-weight: 700;
-  color: #bb55ef; /* Brand purple */
-  margin: 0;
+  color: #bb55ef;
+  margin: 0 auto;
+  text-align: center;
 }
 
 .section-text {
-  font-size: 1.1rem;
+  font-size: 0.9rem;
   color: #333333;
-  line-height: 1.6;
-  margin: 0;
-  max-width: 750px;
+  line-height: 1.55;
+  margin: 0 auto;
+  max-width: 100%;
+  text-align: center;
+}
+
+/* ============================================================
+   3b. HORIZONTAL FEATURE PHOTO
+============================================================ */
+.feature-photo {
+  width: 100%;
+  border-radius: 14px;
+  overflow: hidden;
+  box-shadow: 0 4px 14px rgba(0, 0, 0, 0.12);
+  animation: fadeInUp 0.7s ease both;
+}
+
+.feature-photo-image {
+  width: 100%;
+  height: auto;
+  aspect-ratio: 16 / 9;
+  object-fit: cover;
+  display: block;
+  transition: transform 0.4s ease;
+}
+
+.feature-photo:hover .feature-photo-image {
+  transform: scale(1.03);
+}
+
+/* ============================================================
+   3c. VERTICAL TRIPTYCH
+============================================================ */
+.triptych-grid {
+  width: 100%;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 0.6rem;
+  animation: fadeInUp 0.7s ease both;
+}
+
+.triptych-item {
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 3px 10px rgba(0, 0, 0, 0.1);
+}
+
+.triptych-image {
+  width: 100%;
+  height: 100%;
+  aspect-ratio: 3 / 4;
+  object-fit: cover;
+  display: block;
+  transition: transform 0.4s ease;
+}
+
+.triptych-item:hover .triptych-image {
+  transform: scale(1.06);
 }
 
 /* ============================================================
@@ -140,21 +229,21 @@
 ============================================================ */
 @media (min-width: 571px) {
   .about-banner {
-    height: 120px;           /* Exact Tablet Height */
+    height: 120px;
     border-radius: 20px;
-    padding: 0 2rem;
+    padding: 0 1.5rem;
   }
 
   .about-title {
-    font-size: 3.5rem;
-  }
-
-  .about-description {
-    font-size: 1.25rem;
+    font-size: 3rem;
   }
 
   .section-title {
-    font-size: 2.25rem;
+    font-size: 1.3rem;
+  }
+
+  .section-text {
+    font-size: 0.95rem;
   }
 }
 
@@ -163,30 +252,26 @@
 ============================================================ */
 @media (min-width: 821px) {
   .about-banner {
-    height: 120px;           /* Exact Desktop Height */
+    height: 60px;
     border-radius: 24px;
     padding: 0 2rem;
   }
 
   .about-title {
-    font-size: 3.5rem;
-  }
-
-  .about-description {
-    font-size: 1.35rem;
+    font-size: 3rem;
   }
 
   .about-details {
-    padding: 4rem 2rem;
-    gap: 3.5rem;
+    padding: 2.25rem 1.5rem;
+    gap: 1.75rem;
   }
 
   .section-title {
-    font-size: 2.5rem;
+    font-size: 1.4rem;
   }
 
   .section-text {
-    font-size: 1.2rem;
+    font-size: 0.98rem;
   }
 }
 
@@ -195,36 +280,32 @@
 ============================================================ */
 @media (min-width: 1101px) {
   .about-banner {
-    height: 120px;           /* Exact Large Desktop Height */
+    height: 60px;
     border-radius: 28px;
-    padding: 0 3rem;
+    padding: 0 2.5rem;
   }
 
   .about-content {
-    max-width: 950px;
+    max-width: 800px;
   }
 
   .about-title {
-    font-size: 3.5rem;
-  }
-
-  .about-description {
-    font-size: 1.4rem;
-    max-width: 750px;
+    font-size: 3rem;
   }
 
   .about-details {
-    max-width: 1050px;
-    padding: 5rem 2rem;
+    max-width: 850px;
+    padding: 2.5rem 1.75rem;
+    gap: 2rem;
   }
 
   .section-title {
-    font-size: 2.75rem;
+    font-size: 1.45rem;
   }
 
   .section-text {
-    font-size: 1.25rem;
-    max-width: 850px;
+    font-size: 1rem;
+    max-width: 750px;
   }
 }
 
@@ -233,37 +314,59 @@
 ============================================================ */
 @media (min-width: 1440px) {
   .about-banner {
-    height: 120px;           /* Exact Ultra-Wide Desktop Height */
-    padding: 0 4rem;
+    height: 60px;
+    padding: 0 3rem;
     border-radius: 32px;
   }
 
   .about-content {
-    max-width: 1100px;
-  }
-
-  .about-title {
-    font-size: 3.5rem;
-  }
-
-  .about-description {
-    font-size: 1.5rem;
     max-width: 850px;
   }
 
+  .about-title {
+    font-size: 3rem;
+  }
+
   .about-details {
-    max-width: 1200px;
-    padding: 6rem 2rem;
-    gap: 4.5rem;
+    max-width: 900px;
+    padding: 2.75rem 2rem;
+    gap: 2.25rem;
   }
 
   .section-title {
-    font-size: 2.5rem;
+    font-size: 1.5rem;
   }
 
   .section-text {
-    font-size: 1.3rem;
-    max-width: 950px;
+    font-size: 1.02rem;
+    max-width: 800px;
+  }
+}
+
+/* ============================================================
+   8. ANIMATIONS
+============================================================ */
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(14px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .about-banner,
+  .details-card,
+  .feature-photo,
+  .triptych-grid {
+    animation: none;
+  }
+  .feature-photo-image,
+  .triptych-image {
+    transition: none;
   }
 }
 </style>
