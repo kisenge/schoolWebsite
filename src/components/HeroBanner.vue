@@ -100,7 +100,7 @@
 
 /* All text is strictly BLACK */
 .hero-title {
-  font-size: 5rem;
+  font-size: 3.5rem;
   font-weight: 800;
   color: #000000;           /* Pure Black */
   margin: 0;

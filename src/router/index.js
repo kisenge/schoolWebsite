@@ -21,14 +21,24 @@ const router = createRouter({
     {
       path: '/our-days',
       name: 'our-days',
-      component:OurDaysView,
+      component: OurDaysView,
     },
     {
       path: '/contact-us',
       name: 'contact-us',
-      component:ContactUsView,
+      component: ContactUsView,
     },
   ],
+  // 🔽 THIS ROUTER FUNCTION FORCES THE PAGE TO THE TOP 🔽
+  scrollBehavior(to, from, savedPosition) {
+    if (savedPosition) {
+      // Keeps the user's spot if they click the browser Back/Forward buttons
+      return savedPosition
+    } else {
+      // Scrolls smoothly to the very top for any new page clicks
+      return { top: 0, behavior: 'smooth' }
+    }
+  }
 })
 
 export default router
